@@ -162,7 +162,6 @@ namespace BaiTapLon
                     cmd.ExecuteNonQuery();
                     cmd.Dispose();
                 }
-
                 MessageBox.Show("Xóa thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 LoadDL_PhongBan();
             }
