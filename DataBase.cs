@@ -9,6 +9,6 @@ namespace BaiTapLon
 {
     class DataBase
     {
-        public static SqlConnection MyCon = new SqlConnection(@"Data Source=localhost;Initial Catalog=QLBANHANG;Persist Security Info=True;User ID=admin;Password=admin");
+        public static SqlConnection SqlConnection = new SqlConnection(@"Data Source=localhost;Initial Catalog=QLBANHANG;Persist Security Info=True;User ID=admin;Password=admin");
     }
 }
