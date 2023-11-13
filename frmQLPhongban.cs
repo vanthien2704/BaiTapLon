@@ -26,12 +26,14 @@ namespace BaiTapLon
             btnXoa.Enabled = false;
             btnLuu.Enabled = false;
         }
+
         private void SetTextBox(bool a)
         {
             txtMaphong.Enabled = a;
             txtTenphong.Enabled = a;
             txtSdt.Enabled = a;
         }
+
         private void LoadDL_PhongBan()
         {
             string sql = "select * from PHONGBAN";
@@ -69,7 +71,9 @@ namespace BaiTapLon
             SetTextBox(true);
             btnLuu.Enabled = true;
         }
+
         bool capnhat = false;
+
         private void btnSua_Click(object sender, EventArgs e)
         {
             capnhat = true;
@@ -82,23 +86,27 @@ namespace BaiTapLon
         {
             try
             {
-                if (DataBase.SqlConnection.State == ConnectionState.Open) DataBase.SqlConnection.Close();
+                if (DataBase.SqlConnection.State == ConnectionState.Open)
+                    DataBase.SqlConnection.Close();
                 DataBase.SqlConnection.Open();
-                if (capnhat == true)
+
+                string sql = "select count(*) from PHONGBAN where MAPHONG = '" + txtMaphong.Text + "'";
+                SqlCommand cmd = new SqlCommand(sql, DataBase.SqlConnection);
+                int count = (int)cmd.ExecuteScalar();
+
+                if (count > 0)
                 {
-                    string sql = "select count(*) from PHONGBAN where MAPHONG = '" + txtMaphong.Text + "'";
-                    SqlCommand cmd = new SqlCommand(sql, DataBase.SqlConnection);
-                    int count = (int)cmd.ExecuteScalar();
-                    if (count > 0)
-                    {
-                        MessageBox.Show("Đã có mã phòng này", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }else
+                    MessageBox.Show("Đã có mã phòng này", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    if (capnhat == true)
                     {
                         int dong = dgvPhongban.CurrentRow.Index;
                         string maphong = dgvPhongban.Rows[dong].Cells[0].Value.ToString();
                         string sqlupdate = @"update PHONGBAN set 
-                                MAPHONG = @maphong, TENPHONG = @tenphong, DIENTHOAI = @sdt
-                                WHERE MAPHONG = '" + maphong + "'";
+                                            MAPHONG = @maphong, TENPHONG = @tenphong, DIENTHOAI = @sdt
+                                            WHERE MAPHONG = '" + maphong + "'";
                         SqlCommand cmd1 = new SqlCommand(sqlupdate, DataBase.SqlConnection);
                         cmd1.Parameters.AddWithValue("@maphong", txtMaphong.Text);
                         cmd1.Parameters.AddWithValue("@tenphong", txtTenphong.Text);
@@ -108,21 +116,11 @@ namespace BaiTapLon
                         MessageBox.Show("Cập nhật thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         LoadDL_PhongBan();
                         capnhat = false;
-                    }     
-                }
-                else
-                {
-                    string sql = "select count(*) from PHONGBAN where MAPHONG = '" + txtMaphong.Text + "'";
-                    SqlCommand cmd = new SqlCommand(sql, DataBase.SqlConnection);
-                    int count = (int)cmd.ExecuteScalar();
-                    if (count > 0)
-                    {
-                        MessageBox.Show("Đã có mã phòng này", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     else
                     {
                         string sqlinsert = @"insert into PHONGBAN (MAPHONG, TENPHONG, DIENTHOAI)
-                        values (@maphong, @tenphong, @sdt)";
+                                            values (@maphong, @tenphong, @sdt)";
                         SqlCommand cmd1 = new SqlCommand(sqlinsert, DataBase.SqlConnection);
                         cmd1.Parameters.AddWithValue("@maphong", txtMaphong.Text);
                         cmd1.Parameters.AddWithValue("@tenphong", txtTenphong.Text);
@@ -151,8 +149,10 @@ namespace BaiTapLon
         {
             try
             {
-                if (DataBase.SqlConnection.State == ConnectionState.Open) DataBase.SqlConnection.Close();
+                if (DataBase.SqlConnection.State == ConnectionState.Open)
+                    DataBase.SqlConnection.Close();
                 DataBase.SqlConnection.Open();
+
                 foreach (DataGridViewRow selectedRow in dgvPhongban.SelectedRows)
                 {
                     string maphong = selectedRow.Cells["MAPHONG"].Value.ToString();
@@ -162,6 +162,7 @@ namespace BaiTapLon
                     cmd.ExecuteNonQuery();
                     cmd.Dispose();
                 }
+
                 MessageBox.Show("Xóa thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 LoadDL_PhongBan();
             }
