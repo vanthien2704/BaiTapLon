@@ -21,15 +21,49 @@ namespace BaiTapLon
         {
             LoadDL_PhongBan();
             SetTextBox(false);
-            btnSua.Enabled = false;
-            btnXoa.Enabled = false;
-            btnLuu.Enabled = false;
+            SetButtons("Load");
         }
         private void SetTextBox(bool a)
         {
             txtMaphong.Enabled = a;
             txtTenphong.Enabled = a;
             txtSdt.Enabled = a;
+        }
+        private void SetButtons(string mode)
+        {
+            switch (mode)
+            {
+                case "Load":
+                    btnThem.Enabled = true;
+                    btnSua.Enabled = false;
+                    btnLuu.Enabled = false;
+                    btnXoa.Enabled = false;
+                    break;
+                case "Them":
+                    btnThem.Enabled = false;
+                    btnSua.Enabled = false;
+                    btnLuu.Enabled = true;
+                    btnXoa.Enabled = false;
+                    break;
+
+                case "Sua":
+                    btnThem.Enabled = false;
+                    btnSua.Enabled = false;
+                    btnLuu.Enabled = true;
+                    btnXoa.Enabled = false;
+                    break;
+
+                case "Luu":
+                    btnThem.Enabled = true;
+                    btnSua.Enabled = false;
+                    btnLuu.Enabled = false;
+                    btnXoa.Enabled = false;
+                    break;
+                case "CellClick":
+                    btnSua.Enabled = true;
+                    btnXoa.Enabled = true;
+                    break;
+            }
         }
         private void LoadDL_PhongBan()
         {
@@ -55,8 +89,7 @@ namespace BaiTapLon
                 txtTenphong.Text = dgvPhongban.Rows[dong].Cells[1].Value.ToString();
                 txtSdt.Text = dgvPhongban.Rows[dong].Cells[2].Value.ToString();
             }
-            btnSua.Enabled = true;
-            btnXoa.Enabled = true;
+            SetButtons("CellClick");
         }
         private void btnThem_Click(object sender, EventArgs e)
         {
@@ -64,15 +97,14 @@ namespace BaiTapLon
             txtTenphong.Clear();
             txtSdt.Clear();
             SetTextBox(true);
-            btnLuu.Enabled = true;
+            SetButtons("Them");
         }
         bool capnhat = false;
         private void btnSua_Click(object sender, EventArgs e)
         {
             capnhat = true;
             SetTextBox(true);
-            btnLuu.Enabled = true;
-            btnThem.Enabled = false;
+            SetButtons("Sua");
         }
         private void btnLuu_Click(object sender, EventArgs e)
         {
@@ -130,8 +162,7 @@ namespace BaiTapLon
             }
             finally
             {
-                btnLuu.Enabled = false;
-                btnThem.Enabled = true;
+                SetButtons("Luu");
                 SetTextBox(false);
                 DataBase.SqlConnection.Close();
             }
