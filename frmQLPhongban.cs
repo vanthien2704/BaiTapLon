@@ -17,7 +17,6 @@ namespace BaiTapLon
         {
             InitializeComponent();
         }
-
         private void frmQLPhongban_Load(object sender, EventArgs e)
         {
             LoadDL_PhongBan();
@@ -26,14 +25,12 @@ namespace BaiTapLon
             btnXoa.Enabled = false;
             btnLuu.Enabled = false;
         }
-
         private void SetTextBox(bool a)
         {
             txtMaphong.Enabled = a;
             txtTenphong.Enabled = a;
             txtSdt.Enabled = a;
         }
-
         private void LoadDL_PhongBan()
         {
             string sql = "select * from PHONGBAN";
@@ -49,7 +46,6 @@ namespace BaiTapLon
             dgvPhongban.EditMode = DataGridViewEditMode.EditProgrammatically;
             dgvPhongban.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
         }
-
         private void dgvPhongban_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int dong = e.RowIndex;
@@ -62,7 +58,6 @@ namespace BaiTapLon
             btnSua.Enabled = true;
             btnXoa.Enabled = true;
         }
-
         private void btnThem_Click(object sender, EventArgs e)
         {
             txtMaphong.Clear();
@@ -71,9 +66,7 @@ namespace BaiTapLon
             SetTextBox(true);
             btnLuu.Enabled = true;
         }
-
         bool capnhat = false;
-
         private void btnSua_Click(object sender, EventArgs e)
         {
             capnhat = true;
@@ -81,7 +74,6 @@ namespace BaiTapLon
             btnLuu.Enabled = true;
             btnThem.Enabled = false;
         }
-
         private void btnLuu_Click(object sender, EventArgs e)
         {
             try
@@ -144,7 +136,6 @@ namespace BaiTapLon
                 DataBase.SqlConnection.Close();
             }
         }
-
         private void btnXoa_Click(object sender, EventArgs e)
         {
             try
@@ -174,7 +165,6 @@ namespace BaiTapLon
                 DataBase.SqlConnection.Close();
             }
         }
-
         private void btnThoat_Click(object sender, EventArgs e)
         {
             this.Close();
