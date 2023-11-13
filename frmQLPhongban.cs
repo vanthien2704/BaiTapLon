@@ -67,18 +67,25 @@ namespace BaiTapLon
         }
         private void LoadDL_PhongBan()
         {
-            string sql = "select * from PHONGBAN";
-            SqlDataAdapter adapter = new SqlDataAdapter(sql, DataBase.SqlConnection);
-            DataTable dt = new DataTable();
-            adapter.Fill(dt);
-            dgvPhongban.DataSource = dt;
-            dgvPhongban.Columns[0].HeaderText = "Mã Phòng Ban";
-            dgvPhongban.Columns[1].HeaderText = "Tên Phòng Ban";
-            dgvPhongban.Columns[2].HeaderText = "Số điện thoại";
-            dgvPhongban.AllowUserToAddRows = false;
-            dgvPhongban.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgvPhongban.EditMode = DataGridViewEditMode.EditProgrammatically;
-            dgvPhongban.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            try
+            {
+                string sql = "select * from PHONGBAN";
+                SqlDataAdapter adapter = new SqlDataAdapter(sql, DataBase.SqlConnection);
+                DataTable dt = new DataTable();
+                adapter.Fill(dt);
+                dgvPhongban.DataSource = dt;
+                dgvPhongban.Columns[0].HeaderText = "Mã Phòng Ban";
+                dgvPhongban.Columns[1].HeaderText = "Tên Phòng Ban";
+                dgvPhongban.Columns[2].HeaderText = "Số điện thoại";
+                dgvPhongban.AllowUserToAddRows = false;
+                dgvPhongban.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                dgvPhongban.EditMode = DataGridViewEditMode.EditProgrammatically;
+                dgvPhongban.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Đã xảy ra lỗi: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
         private void dgvPhongban_CellClick(object sender, DataGridViewCellEventArgs e)
         {
