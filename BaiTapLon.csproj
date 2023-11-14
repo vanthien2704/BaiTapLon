@@ -47,6 +47,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataBase.cs" />
+    <Compile Include="frmQLNhanvien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQLNhanvien.Designer.cs">
+      <DependentUpon>frmQLNhanvien.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmQLPhongban.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -55,6 +61,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmQLNhanvien.resx">
+      <DependentUpon>frmQLNhanvien.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmQLPhongban.resx">
       <DependentUpon>frmQLPhongban.cs</DependentUpon>
     </EmbeddedResource>

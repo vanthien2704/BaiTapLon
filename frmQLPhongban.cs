@@ -21,7 +21,7 @@ namespace BaiTapLon
         {
             LoadDL_PhongBan();
             SetTextBox(false);
-            SetButtons("Load");
+            SetButtons("Luu");
         }
         private void SetTextBox(bool a)
         {
@@ -33,12 +33,6 @@ namespace BaiTapLon
         {
             switch (mode)
             {
-                case "Load":
-                    btnThem.Enabled = true;
-                    btnSua.Enabled = false;
-                    btnLuu.Enabled = false;
-                    btnXoa.Enabled = false;
-                    break;
                 case "Them":
                     btnThem.Enabled = false;
                     btnSua.Enabled = false;
@@ -146,6 +140,8 @@ namespace BaiTapLon
                         cmd1.Dispose();
                         MessageBox.Show("Cập nhật thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         LoadDL_PhongBan();
+                        SetButtons("Luu");
+                        SetTextBox(false);
                         capnhat = false;
                     }
                     else
@@ -160,6 +156,8 @@ namespace BaiTapLon
                         cmd1.Dispose();
                         MessageBox.Show("Đã lưu thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         LoadDL_PhongBan();
+                        SetButtons("Luu");
+                        SetTextBox(false);
                     }
                 }
             }
@@ -169,8 +167,6 @@ namespace BaiTapLon
             }
             finally
             {
-                SetButtons("Luu");
-                SetTextBox(false);
                 DataBase.SqlConnection.Close();
             }
         }
