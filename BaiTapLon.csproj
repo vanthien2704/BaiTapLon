@@ -47,6 +47,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataBase.cs" />
+    <Compile Include="frmQLHanghoa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQLHanghoa.Designer.cs">
+      <DependentUpon>frmQLHanghoa.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmQLNhanvien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -61,6 +67,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmQLHanghoa.resx">
+      <DependentUpon>frmQLHanghoa.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmQLNhanvien.resx">
       <DependentUpon>frmQLNhanvien.cs</DependentUpon>
     </EmbeddedResource>
