@@ -53,6 +53,12 @@
     <Compile Include="frmQLHanghoa.Designer.cs">
       <DependentUpon>frmQLHanghoa.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmQLHoadon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQLHoadon.Designer.cs">
+      <DependentUpon>frmQLHoadon.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmQLNhanvien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,6 +81,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmQLHanghoa.resx">
       <DependentUpon>frmQLHanghoa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQLHoadon.resx">
+      <DependentUpon>frmQLHoadon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmQLNhanvien.resx">
       <DependentUpon>frmQLNhanvien.cs</DependentUpon>

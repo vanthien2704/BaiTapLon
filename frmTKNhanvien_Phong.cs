@@ -32,8 +32,8 @@ namespace BaiTapLon
             try
             {
                 string sql = @"select MANV, HOTEN, (CASE WHEN PHAI = 1 THEN N'Nam' ELSE N'Nữ' END) as PHAI,
-                                 NGAYSINH, HSLUONG, HSCHUCVU, ((HSLUONG+HSCHUCVU)*1300000) as LUONG from NHANVIEN";
-                SqlDataAdapter adapter = new SqlDataAdapter(sql, DataBase.SqlConnection);
+                                 NGAYSINH, HSLUONG, HSCHUCVU, ((HSLUONG+HSCHUCVU)*1300000) as LUONG from NHANVIEN
+                                 where MAPHONG = '" + cbMaphong.Text + "'"; SqlDataAdapter adapter = new SqlDataAdapter(sql, DataBase.SqlConnection);
                 DataTable dt = new DataTable();
                 adapter.Fill(dt);
                 dgvNhanvien.DataSource = dt;
@@ -67,9 +67,6 @@ namespace BaiTapLon
                 cbMaphong.DataSource = dt;
                 cbMaphong.DisplayMember = "MAPHONG";
                 cbMaphong.ValueMember = "MAPHONG";
-                //Gợi ý khi nhập cbMaphong
-                cbMaphong.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
-                cbMaphong.AutoCompleteSource = AutoCompleteSource.ListItems;
                 LayDL_PhongBan();
             }
             catch (Exception ex)
@@ -121,22 +118,7 @@ namespace BaiTapLon
         private void cbMaphong_SelectedIndexChanged(object sender, EventArgs e)
         {
             LayDL_PhongBan();
-            try
-            {
-                string sql = @"select MANV, HOTEN, (CASE WHEN PHAI = 1 THEN N'Nam' ELSE N'Nữ' END) as PHAI,
-                                 NGAYSINH, HSLUONG, HSCHUCVU, ((HSLUONG+HSCHUCVU)*1300000) as LUONG from NHANVIEN
-                                 where MAPHONG = '"+cbMaphong.Text+"'";
-                SqlDataAdapter adapter = new SqlDataAdapter(sql, DataBase.SqlConnection);
-                DataTable dt = new DataTable();
-                adapter.Fill(dt);
-                dgvNhanvien.DataSource = dt;
-                DemSoNV();
-                TinhTongLuong();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Đã xảy ra lỗi: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }    
+            LoadDL_NhanVien();
         }
         private void DemSoNV()
         {
