@@ -65,6 +65,12 @@
     <Compile Include="frmQLPhongban.Designer.cs">
       <DependentUpon>frmQLPhongban.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmTKNhanvien_Phong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTKNhanvien_Phong.Designer.cs">
+      <DependentUpon>frmTKNhanvien_Phong.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmQLHanghoa.resx">
@@ -75,6 +81,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmQLPhongban.resx">
       <DependentUpon>frmQLPhongban.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTKNhanvien_Phong.resx">
+      <DependentUpon>frmTKNhanvien_Phong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
