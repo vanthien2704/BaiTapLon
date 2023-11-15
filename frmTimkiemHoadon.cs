@@ -146,5 +146,10 @@ namespace BaiTapLon
             LayDL_HoaDon();
             LoadDGV_CTHoaDon();
         }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
