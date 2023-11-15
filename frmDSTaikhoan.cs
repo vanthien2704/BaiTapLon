@@ -24,19 +24,26 @@ namespace BaiTapLon
         }
         private void LoadDGV_TaiKhoan()
         {
-            string sql = @"select ID_USER, TENTK, QUYEN from TAIKHOAN";
-            SqlDataAdapter ad = new SqlDataAdapter(sql, DataBase.SqlConnection);
-            DataTable dt = new DataTable();
-            ad.Fill(dt);
-            dgvDSTK.DataSource = dt;
-            dgvDSTK.DataSource = dt;
-            dgvDSTK.Columns[0].HeaderText = "ID USER";
-            dgvDSTK.Columns[1].HeaderText = "Tên tài khoản";
-            dgvDSTK.Columns[2].HeaderText = "Quyền";
-            dgvDSTK.AllowUserToAddRows = false;
-            dgvDSTK.EditMode = DataGridViewEditMode.EditProgrammatically;
-            dgvDSTK.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            DemSoTK();
+            try
+            {
+                string sql = @"select ID_USER, TENTK, QUYEN from TAIKHOAN";
+                SqlDataAdapter ad = new SqlDataAdapter(sql, DataBase.SqlConnection);
+                DataTable dt = new DataTable();
+                ad.Fill(dt);
+                dgvDSTK.DataSource = dt;
+                dgvDSTK.DataSource = dt;
+                dgvDSTK.Columns[0].HeaderText = "ID USER";
+                dgvDSTK.Columns[1].HeaderText = "Tên tài khoản";
+                dgvDSTK.Columns[2].HeaderText = "Quyền";
+                dgvDSTK.AllowUserToAddRows = false;
+                dgvDSTK.EditMode = DataGridViewEditMode.EditProgrammatically;
+                dgvDSTK.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+                DemSoTK();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Đã xảy ra lỗi: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btnThem_Click(object sender, EventArgs e)

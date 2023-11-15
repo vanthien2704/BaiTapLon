@@ -45,8 +45,8 @@ namespace BaiTapLon
             this.ThongKe_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.DSNhanVien_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.TKNVTheoPhongBan_ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.BaoCao_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.TimHoaDonTheoNV_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.BaoCao_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.TimKiemHoaDon_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.XemHoaDon_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
@@ -186,6 +186,13 @@ namespace BaiTapLon
             this.TKNVTheoPhongBan_ToolStripMenuItem1.Text = "Thống kê nhân viên theo phòng ban";
             this.TKNVTheoPhongBan_ToolStripMenuItem1.Click += new System.EventHandler(this.TKNVTheoPhongBan_ToolStripMenuItem1_Click);
             // 
+            // TimHoaDonTheoNV_ToolStripMenuItem
+            // 
+            this.TimHoaDonTheoNV_ToolStripMenuItem.Name = "TimHoaDonTheoNV_ToolStripMenuItem";
+            this.TimHoaDonTheoNV_ToolStripMenuItem.Size = new System.Drawing.Size(369, 26);
+            this.TimHoaDonTheoNV_ToolStripMenuItem.Text = "Tìm hóa đơn theo nhân viên";
+            this.TimHoaDonTheoNV_ToolStripMenuItem.Click += new System.EventHandler(this.TimHoaDonTheoNV_ToolStripMenuItem_Click);
+            // 
             // BaoCao_ToolStripMenuItem
             // 
             this.BaoCao_ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -194,13 +201,6 @@ namespace BaiTapLon
             this.BaoCao_ToolStripMenuItem.Name = "BaoCao_ToolStripMenuItem";
             this.BaoCao_ToolStripMenuItem.Size = new System.Drawing.Size(111, 26);
             this.BaoCao_ToolStripMenuItem.Text = "BÁO CÁO";
-            // 
-            // TimHoaDonTheoNV_ToolStripMenuItem
-            // 
-            this.TimHoaDonTheoNV_ToolStripMenuItem.Name = "TimHoaDonTheoNV_ToolStripMenuItem";
-            this.TimHoaDonTheoNV_ToolStripMenuItem.Size = new System.Drawing.Size(369, 26);
-            this.TimHoaDonTheoNV_ToolStripMenuItem.Text = "Tìm hóa đơn theo nhân viên";
-            this.TimHoaDonTheoNV_ToolStripMenuItem.Click += new System.EventHandler(this.TimHoaDonTheoNV_ToolStripMenuItem_Click);
             // 
             // TimKiemHoaDon_ToolStripMenuItem
             // 
@@ -228,6 +228,7 @@ namespace BaiTapLon
             this.Name = "frmMain";
             this.Text = "Chương Trình Quản Lý Bán Hàng";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.frmMain_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

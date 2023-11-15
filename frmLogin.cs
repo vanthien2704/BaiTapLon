@@ -41,6 +41,7 @@ namespace BaiTapLon
                     quyen = rd.GetString(2);
                     if (kiemtramk)
                     {
+                        rd.Close();
                         this.Hide();
                         frmMain frmMain = new frmMain();
                         frmMain.ShowDialog();

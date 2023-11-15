@@ -38,7 +38,7 @@ namespace BaiTapLon
 
         private void DangXuat_ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            LoadMenu("");
         }
 
         private void Thoat_ToolStripMenuItem_Click(object sender, EventArgs e)
@@ -107,6 +107,36 @@ namespace BaiTapLon
             //frmXemHoadon frmXemHoadon = new frmXemHoadon();
             //frmXemHoadon.MdiParent = this;
             //frmXemHoadon.Show();
+        }
+        private void LoadMenu(string quyen)
+        {
+            switch (quyen)
+            {
+                case "admin":
+                    // Thực hiện hành động không được làm cho quyền Admin
+                    break;
+                case "nhanvien":
+                    // Thực hiện hành động không được làm cho quyền Quản Lý
+                    ThongTinTK_ToolStripMenuItem.Visible = false;
+                    QLPhongBan_ToolStripMenuItem.Visible = false;
+                    QLHangHoaToolStripMenuItem.Visible = false;
+                    QLNhanVien_ToolStripMenuItem.Visible = false;
+                    ThongKe_ToolStripMenuItem.Visible = false;
+                    break;
+                default:
+                    //Thực hiện hành động không được làm cho quyền mặc định
+                    ThongTinTK_ToolStripMenuItem.Visible = false;
+                    DangXuat_ToolStripMenuItem.Visible = false;
+                    NhapDuLieu_ToolStripMenuItem.Visible = false;
+                    ThongKe_ToolStripMenuItem.Visible = false;
+                    BaoCao_ToolStripMenuItem.Visible = false;
+                    break;
+            }
+        }
+
+        private void frmMain_Load(object sender, EventArgs e)
+        {
+            LoadMenu(frmLogin.quyen);
         }
     }
 }
