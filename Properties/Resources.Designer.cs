@@ -59,5 +59,15 @@ namespace BaiTapLon.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap User_icon_2_svg {
+            get {
+                object obj = ResourceManager.GetObject("User_icon_2.svg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }
