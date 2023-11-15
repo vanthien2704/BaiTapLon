@@ -73,8 +73,7 @@ namespace BaiTapLon
                     }
                     else
                     {
-                        //string password = MD5Helper.CalculateMD5Hash(txtMatkhau.Text);
-                        string password = txtMatkhau.Text;
+                        string password = BCrypt.Net.BCrypt.HashPassword(txtMatkhau.Text);
                         string sqlinsert = @"insert into taikhoan (ID_USER, TENTK, MATKHAU, QUYEN)
                         values (@id, @tentk, @matkhau, @quyen)";
                         SqlCommand cmd1 = new SqlCommand(sqlinsert, DataBase.SqlConnection);

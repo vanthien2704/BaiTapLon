@@ -151,7 +151,7 @@ namespace BaiTapLon
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmDSTaikhoan";
-            this.Text = "frmDSTaikhoan";
+            this.Text = "Danh Sách Tài Khoản";
             this.Load += new System.EventHandler(this.frmDSTaikhoan_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSTK)).EndInit();
             this.groupBox1.ResumeLayout(false);
