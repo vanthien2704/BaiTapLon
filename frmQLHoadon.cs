@@ -520,13 +520,13 @@ namespace BaiTapLon
         private void TongTienHD()
         {
             txtGiatriHD.ReadOnly = true;
-            decimal tongLuong = 0;
+            decimal tongtien = 0;
             foreach (DataGridViewRow row in dgvHanghoa.Rows)
             {
-                decimal luong = Convert.ToDecimal(row.Cells[4].Value);
-                tongLuong += luong;
+                decimal tien = Convert.ToDecimal(row.Cells[4].Value);
+                tongtien += tien;
             }
-            txtGiatriHD.Text = tongLuong.ToString();
+            txtGiatriHD.Text = tongtien.ToString();
         }
 
         private void btnThoat_Click(object sender, EventArgs e)
