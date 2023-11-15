@@ -47,6 +47,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataBase.cs" />
+    <Compile Include="frmDSTaikhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDSTaikhoan.Designer.cs">
+      <DependentUpon>frmDSTaikhoan.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmQLHanghoa.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -71,6 +77,12 @@
     <Compile Include="frmQLPhongban.Designer.cs">
       <DependentUpon>frmQLPhongban.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmThemTaikhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmThemTaikhoan.Designer.cs">
+      <DependentUpon>frmThemTaikhoan.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmTimHoadon_Nhanvien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,6 +103,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmDSTaikhoan.resx">
+      <DependentUpon>frmDSTaikhoan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmQLHanghoa.resx">
       <DependentUpon>frmQLHanghoa.cs</DependentUpon>
     </EmbeddedResource>
@@ -102,6 +117,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmQLPhongban.resx">
       <DependentUpon>frmQLPhongban.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmThemTaikhoan.resx">
+      <DependentUpon>frmThemTaikhoan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTimHoadon_Nhanvien.resx">
       <DependentUpon>frmTimHoadon_Nhanvien.cs</DependentUpon>

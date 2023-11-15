@@ -16,7 +16,7 @@ namespace BaiTapLon
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmTimHoadon_Nhanvien());
+            Application.Run(new frmDSTaikhoan());
         }
     }
 }
