@@ -185,6 +185,7 @@ namespace BaiTapLon
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmTKNhanvien_Phong";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thống Kê Nhân Viên Theo Phòng";
             this.Load += new System.EventHandler(this.frmTKNhanvien_Phong_Load);
             this.groupBox1.ResumeLayout(false);

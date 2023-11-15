@@ -30,15 +30,15 @@ namespace BaiTapLon
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtDongia = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.dtpNgaysx = new System.Windows.Forms.DateTimePicker();
             this.txtTenhang = new System.Windows.Forms.TextBox();
             this.txtMahang = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.dtpNgaysx = new System.Windows.Forms.DateTimePicker();
-            this.txtDongia = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.dgvHanghoa = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnThoat = new System.Windows.Forms.Button();
@@ -69,6 +69,30 @@ namespace BaiTapLon
             this.groupBox1.Size = new System.Drawing.Size(858, 127);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
+            // 
+            // txtDongia
+            // 
+            this.txtDongia.Location = new System.Drawing.Point(468, 74);
+            this.txtDongia.Name = "txtDongia";
+            this.txtDongia.Size = new System.Drawing.Size(248, 30);
+            this.txtDongia.TabIndex = 17;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(369, 77);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(75, 23);
+            this.label5.TabIndex = 16;
+            this.label5.Text = "Đơn giá";
+            // 
+            // dtpNgaysx
+            // 
+            this.dtpNgaysx.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpNgaysx.Location = new System.Drawing.Point(150, 71);
+            this.dtpNgaysx.Name = "dtpNgaysx";
+            this.dtpNgaysx.Size = new System.Drawing.Size(171, 30);
+            this.dtpNgaysx.TabIndex = 15;
             // 
             // txtTenhang
             // 
@@ -120,30 +144,6 @@ namespace BaiTapLon
             this.label1.Size = new System.Drawing.Size(360, 35);
             this.label1.TabIndex = 3;
             this.label1.Text = "THÔNG TIN HÀNG HÓA";
-            // 
-            // dtpNgaysx
-            // 
-            this.dtpNgaysx.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpNgaysx.Location = new System.Drawing.Point(150, 71);
-            this.dtpNgaysx.Name = "dtpNgaysx";
-            this.dtpNgaysx.Size = new System.Drawing.Size(171, 30);
-            this.dtpNgaysx.TabIndex = 15;
-            // 
-            // txtDongia
-            // 
-            this.txtDongia.Location = new System.Drawing.Point(468, 74);
-            this.txtDongia.Name = "txtDongia";
-            this.txtDongia.Size = new System.Drawing.Size(248, 30);
-            this.txtDongia.TabIndex = 17;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(369, 77);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(75, 23);
-            this.label5.TabIndex = 16;
-            this.label5.Text = "Đơn giá";
             // 
             // dgvHanghoa
             // 
@@ -234,8 +234,9 @@ namespace BaiTapLon
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmQLHanghoa";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản Lý Hàng Hóa";
             this.Load += new System.EventHandler(this.frmQLHanghoa_Load);
             this.groupBox1.ResumeLayout(false);

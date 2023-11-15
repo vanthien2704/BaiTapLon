@@ -138,6 +138,7 @@ namespace BaiTapLon
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmLogin";
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng nhập";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);

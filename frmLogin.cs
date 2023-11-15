@@ -41,9 +41,10 @@ namespace BaiTapLon
                     quyen = rd.GetString(2);
                     if (kiemtramk)
                     {
-                        //formMain formMain = new formMain();
-                        //formMain.Show();
-                        //this.Hide();
+                        this.Hide();
+                        frmMain frmMain = new frmMain();
+                        frmMain.ShowDialog();
+                        this.Show();
                     }
                     else
                     {
@@ -67,6 +68,7 @@ namespace BaiTapLon
 
         private void btnThoat_Click(object sender, EventArgs e)
         {
+            //Application.Exit();
             this.Close();
         }
     }

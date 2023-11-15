@@ -35,6 +35,11 @@ namespace BaiTapLon
             this.btnTimkiem = new System.Windows.Forms.Button();
             this.btnThoat = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.dgvHoadon = new System.Windows.Forms.DataGridView();
+            this.txtMaphong = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.dtpNgaysinh = new System.Windows.Forms.DateTimePicker();
             this.txtHesochucvu = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -45,11 +50,6 @@ namespace BaiTapLon
             this.txtHotennv = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtMaphong = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.dgvHoadon = new System.Windows.Forms.DataGridView();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -137,6 +137,52 @@ namespace BaiTapLon
             this.groupBox3.TabIndex = 7;
             this.groupBox3.TabStop = false;
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(212, 206);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(417, 35);
+            this.label5.TabIndex = 19;
+            this.label5.Text = "DANH SÁCH CÁC HÓA ĐƠN";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(212, 26);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(366, 35);
+            this.label2.TabIndex = 18;
+            this.label2.Text = "THÔNG TIN NHÂN VIÊN";
+            // 
+            // dgvHoadon
+            // 
+            this.dgvHoadon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvHoadon.Location = new System.Drawing.Point(6, 244);
+            this.dgvHoadon.Name = "dgvHoadon";
+            this.dgvHoadon.RowHeadersWidth = 51;
+            this.dgvHoadon.RowTemplate.Height = 24;
+            this.dgvHoadon.Size = new System.Drawing.Size(779, 278);
+            this.dgvHoadon.TabIndex = 17;
+            // 
+            // txtMaphong
+            // 
+            this.txtMaphong.Location = new System.Drawing.Point(603, 164);
+            this.txtMaphong.Name = "txtMaphong";
+            this.txtMaphong.Size = new System.Drawing.Size(128, 30);
+            this.txtMaphong.TabIndex = 16;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(503, 167);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(93, 23);
+            this.label1.TabIndex = 15;
+            this.label1.Text = "Mã phòng";
+            // 
             // dtpNgaysinh
             // 
             this.dtpNgaysinh.Format = System.Windows.Forms.DateTimePickerFormat.Short;
@@ -218,52 +264,6 @@ namespace BaiTapLon
             this.label3.TabIndex = 1;
             this.label3.Text = "Ngày sinh";
             // 
-            // txtMaphong
-            // 
-            this.txtMaphong.Location = new System.Drawing.Point(603, 164);
-            this.txtMaphong.Name = "txtMaphong";
-            this.txtMaphong.Size = new System.Drawing.Size(128, 30);
-            this.txtMaphong.TabIndex = 16;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(503, 167);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(93, 23);
-            this.label1.TabIndex = 15;
-            this.label1.Text = "Mã phòng";
-            // 
-            // dgvHoadon
-            // 
-            this.dgvHoadon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvHoadon.Location = new System.Drawing.Point(6, 244);
-            this.dgvHoadon.Name = "dgvHoadon";
-            this.dgvHoadon.RowHeadersWidth = 51;
-            this.dgvHoadon.RowTemplate.Height = 24;
-            this.dgvHoadon.Size = new System.Drawing.Size(779, 278);
-            this.dgvHoadon.TabIndex = 17;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(212, 26);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(366, 35);
-            this.label2.TabIndex = 18;
-            this.label2.Text = "THÔNG TIN NHÂN VIÊN";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(212, 206);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(417, 35);
-            this.label5.TabIndex = 19;
-            this.label5.Text = "DANH SÁCH CÁC HÓA ĐƠN";
-            // 
             // frmTimHoadon_Nhanvien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
@@ -273,8 +273,9 @@ namespace BaiTapLon
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmTimHoadon_Nhanvien";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tìm Hóa Đơn Theo Nhân Viên";
             this.Load += new System.EventHandler(this.frmTimHoadon_Nhanvien_Load);
             this.groupBox1.ResumeLayout(false);
