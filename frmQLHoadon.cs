@@ -21,7 +21,7 @@ namespace BaiTapLon
         private void frmQLHoadon_Load(object sender, EventArgs e)
         {
             LoadDL_MaHD();
-            LoadDL_MaNH();
+            LoadDL_MaNV();
             LoadDL_MaHang();
             SetTextBox(false);
             SetButtons("Luu");
@@ -73,7 +73,7 @@ namespace BaiTapLon
                 MessageBox.Show($"Đã xảy ra lỗi: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        private void LoadDL_MaNH()
+        private void LoadDL_MaNV()
         {
             try
             {

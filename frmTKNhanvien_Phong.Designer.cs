@@ -30,6 +30,7 @@ namespace BaiTapLon
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cbMaphong = new System.Windows.Forms.ComboBox();
             this.txtTenphong = new System.Windows.Forms.TextBox();
             this.txtSdt = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -41,7 +42,6 @@ namespace BaiTapLon
             this.label5 = new System.Windows.Forms.Label();
             this.txtTongtienluong = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.cbMaphong = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNhanvien)).BeginInit();
             this.SuspendLayout();
@@ -63,6 +63,15 @@ namespace BaiTapLon
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "THÔNG TIN PHÒNG BAN";
+            // 
+            // cbMaphong
+            // 
+            this.cbMaphong.FormattingEnabled = true;
+            this.cbMaphong.Location = new System.Drawing.Point(122, 38);
+            this.cbMaphong.Name = "cbMaphong";
+            this.cbMaphong.Size = new System.Drawing.Size(136, 31);
+            this.cbMaphong.TabIndex = 6;
+            this.cbMaphong.SelectedIndexChanged += new System.EventHandler(this.cbMaphong_SelectedIndexChanged);
             // 
             // txtTenphong
             // 
@@ -161,15 +170,6 @@ namespace BaiTapLon
             this.label6.TabIndex = 7;
             this.label6.Text = "Tổng tiền lương";
             // 
-            // cbMaphong
-            // 
-            this.cbMaphong.FormattingEnabled = true;
-            this.cbMaphong.Location = new System.Drawing.Point(122, 38);
-            this.cbMaphong.Name = "cbMaphong";
-            this.cbMaphong.Size = new System.Drawing.Size(136, 31);
-            this.cbMaphong.TabIndex = 6;
-            this.cbMaphong.SelectedIndexChanged += new System.EventHandler(this.cbMaphong_SelectedIndexChanged);
-            // 
             // frmTKNhanvien_Phong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
@@ -183,9 +183,9 @@ namespace BaiTapLon
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmTKNhanvien_Phong";
-            this.Text = "frmTKNhanvien_Phong";
+            this.Text = "Thống Kê Nhân Viên Theo Phòng";
             this.Load += new System.EventHandler(this.frmTKNhanvien_Phong_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
