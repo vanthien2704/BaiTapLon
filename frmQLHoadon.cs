@@ -366,6 +366,8 @@ namespace BaiTapLon
         }
         private void SetTextBoxCT(bool a)
         {
+            txtGiatriHD.ReadOnly = true;
+            txtTenhang.ReadOnly = true;
             cbMahang.Enabled = a;
             txtTenhang.Enabled = a;
             txtSoluong.Enabled = a;
@@ -519,7 +521,6 @@ namespace BaiTapLon
         }
         private void TongTienHD()
         {
-            txtGiatriHD.ReadOnly = true;
             decimal tongtien = 0;
             foreach (DataGridViewRow row in dgvHanghoa.Rows)
             {
