@@ -45,6 +45,12 @@ namespace BaiTapLon
                         this.Hide();
                         frmMain frmMain = new frmMain();
                         frmMain.ShowDialog();
+                        if(frmMain.thoat == true)
+                        {
+                            Application.Exit();
+                        }    
+                        txtTenTK.Clear();
+                        txtMatkhau.Clear();
                         this.Show();
                     }
                     else
@@ -69,8 +75,7 @@ namespace BaiTapLon
 
         private void btnThoat_Click(object sender, EventArgs e)
         {
-            //Application.Exit();
-            this.Close();
+            Application.Exit();
         }
     }
 }

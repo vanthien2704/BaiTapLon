@@ -40,10 +40,11 @@ namespace BaiTapLon
         {
             LoadMenu("");
         }
-
+        public static bool thoat = false;
         private void Thoat_ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            thoat = true;
+            this.Close();
         }
 
         private void QLPhongBan_ToolStripMenuItem_Click(object sender, EventArgs e)
