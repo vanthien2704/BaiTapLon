@@ -30,7 +30,7 @@ namespace BaiTapLon
             try
             {
                 string sql = @"select MANV, HOTEN, (CASE WHEN PHAI = 1 THEN N'Nam' ELSE N'Nữ' END) as PHAI,
-                                 NGAYSINH, HSLUONG, HSCHUCVU, ((HSLUONG+HSCHUCVU)*1300000) as LUONG, MAPHONG from NHANVIEN";
+                                 NGAYSINH, HSLUONG, HSCHUCVU, CAST((HSLUONG+HSCHUCVU)*1300000 AS INT) AS LUONG, MAPHONG from NHANVIEN";
                 SqlDataAdapter adapter = new SqlDataAdapter(sql, DataBase.SqlConnection);
                 DataTable dt = new DataTable();
                 adapter.Fill(dt);
