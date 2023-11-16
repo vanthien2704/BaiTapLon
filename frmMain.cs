@@ -104,9 +104,9 @@ namespace BaiTapLon
 
         private void XemHoaDon_ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //frmXemHoadon frmXemHoadon = new frmXemHoadon();
-            //frmXemHoadon.MdiParent = this;
-            //frmXemHoadon.Show();
+            frmXemHoadon frmXemHoadon = new frmXemHoadon();
+            frmXemHoadon.MdiParent = this;
+            frmXemHoadon.Show();
         }
         private void LoadMenu(string quyen)
         {
