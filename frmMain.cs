@@ -77,9 +77,9 @@ namespace BaiTapLon
 
         private void DSNhanVien_ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //frmDSNhanvien frmDSNhanvien = new frmDSNhanvien();
-            //frmDSNhanvien.MdiParent = this;
-            //frmDSNhanvien.Show();
+            frmDSNhanvien frmDSNhanvien = new frmDSNhanvien();
+            frmDSNhanvien.MdiParent = this;
+            frmDSNhanvien.Show();
         }
 
         private void TKNVTheoPhongBan_ToolStripMenuItem1_Click(object sender, EventArgs e)

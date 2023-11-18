@@ -63,6 +63,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSetHoaDon.xsd</DependentUpon>
     </Compile>
+    <Compile Include="frmDSNhanvien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDSNhanvien.Designer.cs">
+      <DependentUpon>frmDSNhanvien.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmDSTaikhoan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -143,6 +149,9 @@
       <DependentUpon>RPHoaDon.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <EmbeddedResource Include="frmDSNhanvien.resx">
+      <DependentUpon>frmDSNhanvien.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmDSTaikhoan.resx">
       <DependentUpon>frmDSTaikhoan.cs</DependentUpon>
     </EmbeddedResource>
